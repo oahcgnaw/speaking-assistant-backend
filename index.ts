@@ -38,12 +38,14 @@ const server = Bun.serve({
             } else {
                 return new Response(JSON.stringify({
                     validated: false}), {
+                        status: 401,
                         headers: {
                             ...cors_headers,
                         },
                     })
             }
         } return new Response('Not found', {
+            status: 404,
             headers: {
                 ...cors_headers,
             },
