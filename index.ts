@@ -17,13 +17,6 @@ const server = Bun.serve({
               headers: {
                 ...cors_headers,
               },
-            });
-        }
-        if (req.method === 'OPTIONS') {
-            return new Response(null, {
-              headers: {
-                ...cors_headers,
-              },
             })
         }
         if (path === '/api/v1/validate') {
